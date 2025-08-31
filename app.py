@@ -103,7 +103,7 @@ st.markdown("""
 
 ###########################################################################################
 # Configure the API key for Itinerary planner
-os.environ["GOOGLE_API_KEY"] = "AIzaSyBRRVHWZohQK7PRPieB8bEodlhn6_oorXI"
+os.environ["GOOGLE_API_KEY"] = "YOUR-API-KEY"
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 ###########################################################################################
@@ -150,7 +150,7 @@ if 'recommendation_type' not in st.session_state:
 ###########################################################################################
 # Firebase Configuration
 firebaseConfig = {
-    'apiKey': "AIzaSyDl86osO4TLdUJWu4WKf9ZOSQ675tw_zdg",
+    'apiKey': "YOUR-API-KEY",
     'authDomain': "travel-recommendation-sy-f29e1.firebaseapp.com",
     'projectId': "travel-recommendation-sy-f29e1",
     'databaseURL': "https://travel-recommendation-sy-f29e1-default-rtdb.europe-west1.firebasedatabase.app/",
@@ -1271,4 +1271,5 @@ else:
     # Logout
     elif selected == "Logout":
         st.session_state.clear()
+
         st.rerun()
